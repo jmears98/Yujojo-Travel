@@ -1,0 +1,243 @@
+:root {
+  --accented-color: #387FA8;
+}
+
+/* region RESET & NORMALIZE */
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+input, button, textarea {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+}
+
+textarea {
+  resize: none;
+}
+/* endregion */
+
+
+/* region SIGN IN SECTION */
+.sign-in-section {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.sign-in-section.hidden {
+  display: none;
+}
+
+.sign-in-form {
+  width: 50%;
+  padding: 3%;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.sign-in-form fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px dashed var(--accented-color);
+}
+
+.sign-in-form fieldset label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 14px;
+}
+
+.sign-in-form fieldset input {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px dashed var(--accented-color);
+}
+
+.sign-in-form fieldset input:focus {
+  outline: none;
+  border: 1px dashed #000;
+}
+
+.sign-in-form fieldset button {
+  margin-top: 16px;
+  padding: 8px;
+  background: var(--accented-color);
+  border: 1px solid var(--accented-color);
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.sign-in-form fieldset button:hover {
+  background: #fff;
+  color: #000;
+}
+/* endregion */
+
+/* region SIGN IN SECTION */
+.create-new-post-section {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.create-new-post-section.hidden {
+  display: none;
+}
+
+
+.create-new-post-form {
+  width: 50%;
+  padding: 3%;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.create-new-post-form fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px dashed var(--accented-color);
+}
+
+.create-new-post-form fieldset label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 14px;
+}
+
+.create-new-post-form input,
+.create-new-post-form textarea {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px dashed var(--accented-color);
+}
+
+.create-new-post-form input:focus,
+.create-new-post-form textarea:focus {
+  outline: none;
+  border: 1px dashed #000;
+}
+
+.tags-field {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tags-field label {
+  padding: 4px 8px;
+  background: rgba(140, 219, 238, 0.2);
+  border: 1px solid var(--accented-color);
+  border-radius: 4px;
+  color: var(--accented-color);
+  cursor: pointer;
+}
+
+.create-new-post-form fieldset button {
+  margin-top: 16px;
+  padding: 8px;
+  background: var(--accented-color);
+  border: 1px solid var(--accented-color);
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.create-new-post-form fieldset button:hover {
+  background: #fff;
+  color: #000;
+}
+/* endregion */
+
+/*region MAIN */
+h1 {
+  padding: 0 20px;
+}
+
+.page-wrapper {
+  display: flex;
+}
+
+.page-wrapper main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+}
+
+.page-wrapper aside {
+  flex-grow: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0 12px;
+}
+
+.page-wrapper aside button {
+  min-width: 150px;
+  padding: 8px;
+  background: var(--accented-color);
+  border: 1px solid var(--accented-color);
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.page-wrapper aside button:hover {
+  background: #fff;
+  color: #000;
+}
+
+.post-wrapper {
+  display: flex;
+  padding: 20px;
+  border: 1px solid var(--accented-color);
+  border-radius: 12px;
+}
+
+.post-wrapper .content {
+  flex-grow: 1;
+}
+
+.post-wrapper .img-wrapper {
+  width: 30vw;
+  height: 30vw;
+  overflow: hidden;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.post-wrapper .img-wrapper img {
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.post-wrapper .img-wrapper:hover img {
+  transform: scale(1.2);
+}
+/* endregion */
