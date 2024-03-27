@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS yujojo_db;
+
+CREATE DATABASE yujojo_db;
