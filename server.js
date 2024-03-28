@@ -1,11 +1,14 @@
+// imports
 const express = require('express');
+
 
 const app = express();
 const path = require('path');
+app.use(express.json());
+const PORT = process.env.PORT || 3001;
 
-const PORT = 3001;
-
-app.get('/', (req, res) => res.sendFile(path.join(__dirname, '/public/')));
+app.get('/', async (req, res) => 
+res.sendFile(path.join(__dirname, '/public/')));
 
 
 
