@@ -1,13 +1,26 @@
 {
   "name": "Yujojo-Travel",
   "version": "1.0.0",
+  "engines": {
+    "node": "18.x",
+    "npm": "9.x"
+  },
   "main": "server.js",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.19.2"
+    "dotenv": "^16.4.5",
+    "eslint-config-wesbos": "^4.0.1",
+    "express": "^4.19.2",
+    "express-handlebars": "^7.1.2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
   }
 }
