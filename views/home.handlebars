@@ -1,0 +1,185 @@
+<body>
+<section class="page-wrapper">
+    <main>
+      <article class="post-wrapper">
+        <section class="content">
+          <h2>
+            title
+          </h2>
+    
+          <p>
+            main content...
+          </p>
+        </section>
+  
+        <div class="img-wrapper">
+          <img src="https://www.icegif.com/wp-content/uploads/2022/02/icegif-536.gif" alt="post image">
+        </div>
+      </article>
+  
+    </main>
+  
+    <aside>
+      <button class="action--open-sign-in-section">
+        Sign in
+      </button>
+  
+      <button class="action--open-post-section">
+        New post
+      </button>
+    </aside>
+  </section>
+
+  <section class="sign-in-section hidden">
+    <form action="" class="sign-in-form">
+      <fieldset>
+        <legend>
+          SIGN IN
+        </legend>
+
+        <label>
+          Username:
+
+          <input type="text" id="username" name="username" required>
+        </label>
+        
+        <label>
+          Password:
+
+          <input type="password" name="password" required>
+        </label>
+
+        <button type="submit">
+          SIGN IN
+        </button>
+
+        <p>Don't have an account? <a class="sign-up-form">Click here</a> to sign up!</p>
+      </fieldset>
+    </form>
+  </section>
+
+  <section class="sign-up-section hidden">
+    <form action="" class="sign-up-form">
+      <fieldset>
+        <legend>
+          SIGN UP
+        </legend>
+
+        <label>
+          Username:
+
+          <input type="text" id="username" name="username" required>
+        </label>
+        
+        <label>
+          Password:
+
+          <input type="password" name="password" required>
+        </label>
+                
+        <label>
+          Confirm Password:
+
+          <input type="confirm" name="confirm" required>
+        </label>
+
+
+        <button type="submit">
+          SIGN UP
+        </button>
+      </fieldset>
+    </form>
+  </section>
+
+  <section class="create-new-post-section hidden">
+    <form action="" class="create-new-post-form">
+      <fieldset>
+        <legend>
+          CREATE POST
+        </legend>
+
+        <label>
+          <input type="text" id="post-title" name="post-title" placeholder="Title" required>
+        </label>
+
+        <textarea name="post" id="post-textarea" cols="30" rows="10" placeholder="Post..."></textarea>
+        
+        <label>
+          <input type="file" accept="image/*" id="imageInput">
+        </label>
+
+        <section class="tags-field">
+          <label class="checkbox-label">
+            #food
+            <input type="checkbox" id="option1" class="checkbox-option" name="option1" value="option1" style="display: none;">
+          </label>
+
+          <label class="checkbox-label">
+            #nighlife
+            <input type="checkbox" id="option2" class="checkbox-option" name="option2" value="option2" style="display: none;">
+          </label>
+
+          <label class="checkbox-label">
+            #another
+            <input type="checkbox" id="option3" class="checkbox-option" name="option3" value="option3" style="display: none;">
+          </label>
+        </section>
+
+        <button type="submit">
+          POST
+        </button>
+      </fieldset>
+    </form>
+  </section>
+
+  <script>
+    // sign in section
+    const openSignInForm = document.querySelector('.action--open-sign-in-section');
+    const signInSection = document.querySelector('.sign-in-section');
+    const signInForm = document.querySelector('.sign-in-form');
+
+    openSignInForm.addEventListener('click', function() {
+      const usernameInput = document.getElementById('username');
+
+      signInSection.classList.remove('hidden');
+
+      if (usernameInput) { usernameInput.focus(); }
+    });
+
+    signInSection.addEventListener('click', function(event) {
+        if (event.currentTarget === event.target) {
+            signInSection.classList.add('hidden');
+        }
+    });
+
+    // post section
+    const openPostForm = document.querySelector('.action--open-post-section');
+    const postSection = document.querySelector('.create-new-post-section');
+    const postForm = document.querySelector('.create-new-post-form');
+
+    openPostForm.addEventListener('click', function() {
+      const postTitleInput = document.getElementById('post-title');
+
+      postSection.classList.remove('hidden');
+
+      if (postTitleInput) { postTitleInput.focus(); }
+    });
+
+    postSection.addEventListener('click', function(event) {
+        if (event.currentTarget === event.target) {
+          postSection.classList.add('hidden');
+        }
+    });
+
+    // tags section
+    const checkboxes = document.querySelectorAll('.checkbox-option');
+
+    for (var i = 0; i < checkboxes.length; i++) {
+      checkboxes[i].addEventListener('change', function() {
+        this.parentNode.style.color = this.checked ? 'black' : '#387FA8';
+        this.parentNode.style.border = this.checked ? '1px solid black' : '1px solid #387FA8';
+      });
+    }
+  </script>
+  <script src="js/index.js"></script>
+</body>
