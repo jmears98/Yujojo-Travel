@@ -16,7 +16,11 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(routes);
 
+app.get('/signup', (req, res) => {
+  res.render('signup');
+});
+
 (async () => {
-  await sequelize.sync();
+  await sequelize.sync({ force: true});
   app.listen(PORT, () => console.log(`Listening at http://localhost:${PORT}`));
 })();
