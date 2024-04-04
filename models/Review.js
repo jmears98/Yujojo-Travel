@@ -8,7 +8,6 @@ Review.init(
     postedBy: DataTypes.STRING,
     title: DataTypes.STRING,
     review: DataTypes.STRING,
-    postedOn: DataTypes.DATE,
   },
   {
     sequelize,
@@ -19,7 +18,7 @@ module.exports = Review;
 
 // (async () => {
 //     await sequelize.sync({ force: true });
-  
+
 //     await Review.create({ myDatetime: new Date() });
 //     const instance = await Review.findOne();
 //     console.log(instance.myDatetime);

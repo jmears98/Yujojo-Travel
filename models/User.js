@@ -8,6 +8,7 @@ User.init(
     userName: {
       type: DataTypes.STRING,
       allowNull: false,
+      defaultValue: "namenameusername",
     },
   },
   {
