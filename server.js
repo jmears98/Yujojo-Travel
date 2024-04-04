@@ -16,7 +16,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(routes);
 
-
+app.get('/', (req, res) => {
+  res.render('home');
+});
 
 app.get('/signup', (req, res) => {
   res.render('signup');
@@ -41,6 +43,6 @@ app.post('/users', async (req, res) => {
 });
 
 (async () => {
-  await sequelize.sync({ force: true});
+  await sequelize.sync({ force: true });
   app.listen(PORT, () => console.log(`Listening at http://localhost:${PORT}`));
 })();

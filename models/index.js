@@ -1,5 +1,5 @@
 const User = require('./User');
-const Review = require('./Review');
+const Review = require('./review');
 
 User.hasMany(Review);
 Review.belongsTo(User);

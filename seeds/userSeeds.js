@@ -1,13 +1,13 @@
 const users = [
-{
-   username: "dan"
-},
-{
-    firstName: 'Andrew',
-    lastName: 'Hojo',
-},
-{
-    firstName: 'Jordan',
-    lastName: 'Mears',
-},
-]
+  {
+    username: 'dan',
+  },
+  {
+    username: 'Hojoriffic',
+  },
+  {
+    username: 'jordan.mears',
+  },
+];
+
+module.exports = users;

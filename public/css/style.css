@@ -1,3 +1,11 @@
+head {
+  margin: 0px;
+  background-color: #387FA8;
+}
+
+header {
+  color: white
+}
 :root {
   --accented-color: #387FA8;
 }
